@@ -21,11 +21,13 @@ $.path.task.forEach(function(taskPath) {
 
 $.gulp.task('default', $.gulp.series(
   'clean',
+    'sprite:png',
   $.gulp.parallel(
     'sass',
     'pug',
     'js:foundation',
     'js:process',
+    'copy:fonts',
     'copy:image',
     'css:foundation',
     'sprite:svg'
